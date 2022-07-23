@@ -1,0 +1,118 @@
+@-webkit-keyframes growing-line {
+  from {
+    width: 15vw;
+    border: 3px solid peru;
+  }
+  to {
+    width: calc(100vw - 2rem);
+    border: 3px solid purple;
+  }
+}
+
+@keyframes growing-line {
+  from {
+    width: 15vw;
+    border: 3px solid peru;
+  }
+  to {
+    width: calc(100vw - 2rem);
+    border: 3px solid purple;
+  }
+}
+
+@-webkit-keyframes togging-line {
+  0% {
+    width: 15vw;
+    border: 3px solid peru;
+  }
+  50% {
+    width: calc(100vw - 2rem);
+    border: 3px solid purple;
+  }
+  100% {
+    width: 15vw;
+    border: 3px solid peru;
+  }
+}
+
+@keyframes togging-line {
+  0% {
+    width: 15vw;
+    border: 3px solid peru;
+  }
+  50% {
+    width: calc(100vw - 2rem);
+    border: 3px solid purple;
+  }
+  100% {
+    width: 15vw;
+    border: 3px solid peru;
+  }
+}
+
+body {
+  padding: 1rem;
+}
+
+.simple-line {
+  border: 3px solid peru;
+  width: 15vw;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+.simple-line2 {
+  border: 3px solid peru;
+  width: 15vw;
+  -webkit-animation-name: growing-line;
+          animation-name: growing-line;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.simple-line3 {
+  border: 3px solid peru;
+  width: 15vw;
+  -webkit-animation-name: togging-line;
+          animation-name: togging-line;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.padre {
+  display: inline-block;
+  border-width: 10px !important;
+}
+
+.container {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.width {
+  width: 30%;
+}
+
+.padre2 {
+  display: block;
+  border-width: 10px !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

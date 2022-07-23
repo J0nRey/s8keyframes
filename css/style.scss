@@ -1,0 +1,91 @@
+//Animacion cresca
+
+@keyframes growing-line{
+    from{
+        width: 15vw;
+        border: 3px solid peru;
+    }
+
+    to{
+        width: calc(100vw - 2rem);
+               //aqui evitamos el scroll del pading del body
+               //1rem body + 1rem<elemento><>1rem + body 1rem
+               border: 3px solid purple;
+    }
+}
+
+//Animacion decresca
+
+@keyframes togging-line{
+    0%{
+        width: 15vw;
+        border: 3px solid peru;
+    }
+
+    50%{
+        width: calc(100vw - 2rem);
+               //aqui evitamos el scroll del pading del body
+               //1rem body + 1rem<elemento><>1rem + body 1rem
+               border: 3px solid purple;
+    }
+
+    100%{
+        width: 15vw;
+        border: 3px solid peru;
+    }
+}
+
+//----------------------------------------------------
+body{
+    padding: 1rem;
+}
+
+//la linea crece conforme al vieport
+
+.simple-line{
+    border: 3px solid peru;
+    width: 15vw;
+    transition: 1s linear;
+}
+
+
+.simple-line2{
+    border: 3px solid peru;
+    width: 15vw;
+    animation-name: growing-line;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+}
+
+.simple-line3{
+    border: 3px solid peru;
+    width: 15vw;
+    animation-name: togging-line;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+}
+
+.padre{
+    display: inline-block;
+    border-width: 10px !important;
+}
+
+.container{
+    padding: 0px;
+    display: flex;
+}
+.width{
+    width: 30%;
+}
+
+
+.padre2{
+    display: block;
+    border-width: 10px !important;
+    width: fit-content !important; //El elemento cresera como el elemento lo requiera
+    padding: 1rem;
+}
